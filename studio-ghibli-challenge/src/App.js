@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './App.css'
 import { Cards } from './components/Cards'
+import { Header } from './components/Header'
 
 
 function App() {
@@ -23,9 +24,12 @@ function App() {
 
   return (
 
-    <div className="App row">
-      {filmes.map(({title, description}) => (
+    <div className="App">
+      <Header />
+      
+        {filmes.map(({title, description}) => (
           <Cards title={title} description={description} />
+      
       ))}
     </div>
     
